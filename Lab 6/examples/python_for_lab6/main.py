@@ -1,16 +1,60 @@
-# This is a sample Python script.
+# Множества - Set or Frozenset
+# Для определения множеств использутся фигурные скобки, в которых перечисляются элементы.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+f_set = {1, 2, 3, "Alex", "John", 3}
+print(f_set) # множества содержат только уникальные значения
 
+# еще один вариант определения множества (в функцию можно помещать список или кортеж)
+# + удобна если нужно пустое множество
+n_set = set(["Greg"])
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+f_set.add("Lika")
+print(f_set)
 
+# удаляем элемент при помощи метода remove, в который передаем элемент;
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+f_set.remove("Alex")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# следует проверять на наличие элементов в множестве, т.к. есть вероятность выпада ошибки
+user = "Lika"
+# так, если у нас значение переменной будет входить в множество, то удаляем из множества значение
+# если такого элемента не будет в множестве, то все просто останется на месте
+if user in f_set:
+    f_set.remove(user)
+print(f_set)
+
+# есть еще метод discard, который не будет генерировать ошибку, даже если такого значения не будет в множесте
+f_set.discard(5)
+print(f_set)
+
+# для перебора множестd очень удобно использовать цикл for
+for users in f_set:
+    print(users)
+
+# проверить наличие значения в множестве можно так
+print("Alex" in f_set)
+
+# С помощью метода copy можно скопировать содержимое оного множества в другое
+s_set = f_set.copy()
+print(s_set)
+sn_set = {"Dima", "Nikita", "Anton", "John"}
+t_set = f_set.union(sn_set)
+print(t_set)
+
+# пересечение множеств позволяет получить только те элементы, которые есть в обоих множествах
+t_set = f_set.intersection(sn_set)
+print(t_set)
+
+# разность множеств: получение элементов, которые есть в set1, но отсутвуют в set2
+tn_set = f_set.difference(sn_set)
+print(tn_set)
+
+# можно реализовать иначе
+print(f_set - sn_set)
+
+# если говорить об отношениях множеств, то можно выяснить является ли одно подмножеством другого
+print(t_set.issubset(f_set))
+
+# Словари
+
+# Генераторы
