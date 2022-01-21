@@ -27,7 +27,7 @@ print(f_set)
 f_set.discard(5)
 print(f_set)
 
-# для перебора множестd очень удобно использовать цикл for
+# для перебора множеств очень удобно использовать цикл for
 for users in f_set:
     print(users)
 
