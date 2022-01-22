@@ -17,9 +17,6 @@ def get_list():
     num = []
     for i in range(12):
         num.append(randrange(-4, 3, 1))
-    abs_num = []
-    for n in num:
-        abs_num.append(abs(n))
 
 def get_data1():
     global data1
@@ -46,9 +43,9 @@ def get_data2():
 def get_data3():
     global data3
     if select_func3 == "выполнить":
-        new_abs_num = abs_num.copy()
-        new_abs_num.sort(key=lambda x: x % 3)
-        data3 = f'Отсортированный список по модулю 3: {new_abs_num}.'
+        new_num = num.copy()
+        new_num.sort(key=lambda x: x % 3)
+        data3 = f'Отсортированный список по модулю 3: {new_num}.'
     else:
         data3 = f'Функция данной группы не выполнялась.'
 
@@ -74,7 +71,6 @@ print("""<!DOCTYPE HTML>
 print(f"""
             <p>Добрый день, <b>{in_name}</b>! Взгляните на результат работы.</p>
             <p>Список чисел: <b>{num}</b></p>
-            <p>Список с абсолютными значениями: <b>{abs_num}</b></p>
             <p>Группа 1. <b>{data1}</b></p>
             <p>Группа 2. <b>{data2}</b></p>
             <p>Группа 3. <b>{data3}</b></p>
