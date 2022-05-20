@@ -13,17 +13,11 @@
 ### Результат
 <p align="center"><img src="https://sun9-34.userapi.com/s/v1/if2/EDsACzgIDIjWCFoLRFHt4tyX4vaZ4GygFmweVp0m0wCv20Xu9YZw_vfw-GOhHJtArsPr4NQWsTkfmNeCf1bjJT7I.jpg?size=852x365&quality=96&type=album" /> </p>
 
-<div class="panel panel-info">
-**Remark**
-{: .panel-heading}
-<div class="panel-body">
-
+## Remark
+```
 Для следующих работ необходимо настроить локальный сервер. 
 Для Windows в папке с работой есть специальный файл "start_server.py". 
-
-</div>
-</div>
-
+```
 
 ## Лабораторная работа №7
 ### Задание
